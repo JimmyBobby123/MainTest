@@ -1,8 +1,14 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
+import { CONFIG } from './config';
 
 // WebSocket (Render service)
-const socket = new WebSocket('wss://maintest-5ltj.onrender.com');
+//const socket = new WebSocket('wss://maintest-5ltj.onrender.com');
+const socket = new WebSocket(CONFIG.WS_URL);
+
+if (CONFIG.DEBUG) {
+  console.log("Running in local mode:", CONFIG.WS_URL);
+}
 
 socket.onopen = () => console.log('WS open');
 socket.onerror = (err) => console.error('WS error', err);
