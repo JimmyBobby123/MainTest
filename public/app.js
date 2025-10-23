@@ -3,6 +3,7 @@ import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/js
 
 // Create a WebSocket connection to the server
 const socket = new WebSocket('ws://localhost:8080');
+//const socket = new WebSocket('wss://my-multiplayer-server.onrender.com');
 
 let playerId = null;
 let otherPlayers = {};
