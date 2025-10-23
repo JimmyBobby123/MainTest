@@ -2,8 +2,8 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
 
 // Create a WebSocket connection to the server
-const socket = new WebSocket('ws://localhost:8080');
-//const socket = new WebSocket('wss://my-multiplayer-server.onrender.com');
+//const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket('wss://maintest-5ltj.onrender.com/');
 
 let playerId = null;
 let otherPlayers = {};
