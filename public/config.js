@@ -1,5 +1,4 @@
 // config.js
-
 // Detect whether we're running locally or on a hosted environment
 const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
